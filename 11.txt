@@ -2,18 +2,18 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>¹«Ö÷Çë´ò¿ª - ²ÊÉ«µ¯´°</title>
+    <title>å…¬ä¸»è¯·æ‰“å¼€ - å½©è‰²å¼¹çª—</title>
     <style>
         body {
             margin: 0;
-            padding: 0; /* ÒÆ³ıÄÚ±ß¾à£¬ÈÃ°´Å¥ÍêÈ«¾ÓÖĞ */
+            padding: 0; /* ç§»é™¤å†…è¾¹è·ï¼Œè®©æŒ‰é’®å®Œå…¨å±…ä¸­ */
             background-color: #f0f2f5;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            /* Ê¹ÓÃ flexbox ½«°´Å¥¾ÓÖĞ */
+            /* ä½¿ç”¨ flexbox å°†æŒ‰é’®å±…ä¸­ */
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* ÈÃ body Õ¼ÂúÕû¸öÊÓ¿Ú¸ß¶È */
+            height: 100vh; /* è®© body å æ»¡æ•´ä¸ªè§†å£é«˜åº¦ */
         }
 
         #startBtn {
@@ -27,7 +27,7 @@
             cursor: pointer;
             box-shadow: 0 4px 15px rgba(255, 105, 180, 0.2);
             transition: all 0.3s ease;
-            z-index: 10000; /* È·±£°´Å¥ÔÚ×îÉÏ²ã */
+            z-index: 10000; /* ç¡®ä¿æŒ‰é’®åœ¨æœ€ä¸Šå±‚ */
         }
 
         #startBtn:hover {
@@ -37,7 +37,7 @@
             box-shadow: 0 6px 20px rgba(255, 105, 180, 0.4);
         }
         
-        /* Ìí¼Ó°´Å¥µã»÷ºóÏûÊ§µÄ¶¯»­ */
+        /* æ·»åŠ æŒ‰é’®ç‚¹å‡»åæ¶ˆå¤±çš„åŠ¨ç”» */
         #startBtn.clicked {
             animation: fadeOut 0.5s forwards;
         }
@@ -82,7 +82,7 @@
 </head>
 <body>
 
-    <button id="startBtn">¹«Ö÷Çë´ò¿ª</button>
+    <button id="startBtn">å…¬ä¸»è¯·æ‰“å¼€</button>
 
     <script>
         function getRandomColor() {
@@ -97,7 +97,7 @@
                 setTimeout(() => {
                     const popup = document.createElement('div');
                     popup.className = 'popup';
-                    popup.textContent = 'ÄãºÃÆ¯ÁÁ';
+                    popup.textContent = 'ä½ æ˜¯å¤§ç¬¨è›‹';
                     popup.style.backgroundColor = getRandomColor();
 
                     if (i === 120) {
@@ -123,14 +123,15 @@
 
         const startButton = document.getElementById('startBtn');
         startButton.addEventListener('click', function() {
-            // Ìí¼Ó 'clicked' ÀàÀ´´¥·¢ÏûÊ§¶¯»­
+            // æ·»åŠ  'clicked' ç±»æ¥è§¦å‘æ¶ˆå¤±åŠ¨ç”»
             this.classList.add('clicked');
             
-            // ÑÓ³Ù´´½¨µ¯´°£¬µÈ´ı°´Å¥ÏûÊ§¶¯»­²¥·ÅÍê±Ï
+            // å»¶è¿Ÿåˆ›å»ºå¼¹çª—ï¼Œç­‰å¾…æŒ‰é’®æ¶ˆå¤±åŠ¨ç”»æ’­æ”¾å®Œæ¯•
             setTimeout(() => {
                 createPopups();
-            }, 500); // 500ms ¶ÔÓ¦¶¯»­Ê±³¤
+            }, 500); // 500ms å¯¹åº”åŠ¨ç”»æ—¶é•¿
         });
     </script>
 </body>
+
 </html>
